@@ -62,7 +62,7 @@ class TaskController extends Controller
         return response()->json($task);
     }
 
-    public function destroy($id);
+    public function destroy($id)
     {
         $task = Task::find($id);
 
