@@ -26,7 +26,10 @@ class TaskController extends Controller
         ]);
         $task = Task::create($validated);
 
-        return response()->json($task,201);
+        return response()->json([
+            'message' => 'Task berhasil dibuat',
+            'data' => new TaskResource($task),
+        ],201);
     }
 
     public function show($id){
@@ -38,7 +41,10 @@ class TaskController extends Controller
 
             ],404);
         }
-        return response()->json($task);
+        return response()->json([
+            'message' => 'Task berhasil ditemukan',
+            'data' => new TaskResource($task),
+        ],200);
     }
 
     public function update(Request $request, $id){
@@ -59,7 +65,10 @@ class TaskController extends Controller
 
         $task->update($validated);
 
-        return response()->json($task);
+        return response()->json([
+            'message' => 'Task berhasil diupdate',
+            'data' => new TaskResource($task),
+        ],200);
     }
 
     public function destroy($id)
@@ -76,6 +85,6 @@ class TaskController extends Controller
 
         return response()->json([
             'message' => 'Task berhasil dihapus'
-        ]);
+        ],200);
     }
 }
