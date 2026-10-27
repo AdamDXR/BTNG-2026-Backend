@@ -1,0 +1,7 @@
+$kind: http-request
+name: GET Request /info
+url: "{{base_url}}/"
+method: GET
+headers:
+  Accept: http://127.0.0.1:8000
+order: 1000

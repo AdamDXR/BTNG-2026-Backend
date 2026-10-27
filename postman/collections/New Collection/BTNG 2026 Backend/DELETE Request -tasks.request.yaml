@@ -1,0 +1,5 @@
+$kind: http-request
+name: DELETE Request /tasks
+url: ""
+method: GET
+order: 5000
