@@ -1,0 +1,100 @@
+{
+    "info": {
+        "name": "Showroom Mobil API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "http://127.0.0.1:8000/api"
+        }
+    ],
+    "item": [
+        {
+            "name": "Daftar Mobil",
+            "request": {
+                "method": "GET",
+                "header": [
+                    { "key": "Accept", "value": "application/json" }
+                ],
+                "url": {
+                    "raw": "{{base_url}}/mobil?per_page=10",
+                    "host": ["{{base_url}}"],
+                    "path": ["mobil"],
+                    "query": [
+                        { "key": "per_page", "value": "10" },
+                        { "key": "search", "value": "avanza", "disabled": true },
+                        { "key": "brand", "value": "Toyota", "disabled": true },
+                        { "key": "status", "value": "tersedia", "disabled": true }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Detail Mobil",
+            "request": {
+                "method": "GET",
+                "header": [
+                    { "key": "Accept", "value": "application/json" }
+                ],
+                "url": {
+                    "raw": "{{base_url}}/mobil/1",
+                    "host": ["{{base_url}}"],
+                    "path": ["mobil", "1"]
+                }
+            }
+        },
+        {
+            "name": "Tambah Mobil",
+            "request": {
+                "method": "POST",
+                "header": [
+                    { "key": "Accept", "value": "application/json" },
+                    { "key": "Content-Type", "value": "application/json" }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"nama\": \"HR-V 1.5 SE CVT\",\n    \"brand\": \"Honda\",\n    \"harga\": 399000000,\n    \"tahun\": 2024,\n    \"transmisi\": \"CVT\",\n    \"bahan_bakar\": \"Bensin\",\n    \"status\": \"tersedia\",\n    \"foto\": \"https://images.unsplash.com/photo-1503376780353-7e6692767b70\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/mobil",
+                    "host": ["{{base_url}}"],
+                    "path": ["mobil"]
+                }
+            }
+        },
+        {
+            "name": "Ubah Mobil",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    { "key": "Accept", "value": "application/json" },
+                    { "key": "Content-Type", "value": "application/json" }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"harga\": 385000000,\n    \"status\": \"sold\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/mobil/1",
+                    "host": ["{{base_url}}"],
+                    "path": ["mobil", "1"]
+                }
+            }
+        },
+        {
+            "name": "Hapus Mobil",
+            "request": {
+                "method": "DELETE",
+                "header": [
+                    { "key": "Accept", "value": "application/json" }
+                ],
+                "url": {
+                    "raw": "{{base_url}}/mobil/1",
+                    "host": ["{{base_url}}"],
+                    "path": ["mobil", "1"]
+                }
+            }
+        }
+    ]
+}

@@ -10,12 +10,14 @@ return new class extends Migration
     {
         Schema::create('mobils', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('merek');
+            $table->string('nama', 100);
+            $table->string('brand', 50);
+            $table->unsignedBigInteger('harga');
             $table->unsignedSmallInteger('tahun');
-            $table->string('warna');
-            $table->decimal('harga', 15, 2);
-            $table->boolean('tersedia')->default(true);
+            $table->string('transmisi', 10);
+            $table->string('bahan_bakar', 10);
+            $table->string('status', 10)->default('tersedia');
+            $table->string('foto')->nullable();
             $table->timestamps();
         });
     }

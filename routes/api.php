@@ -37,10 +37,4 @@ Route::put('/sepatu/{id}', [SepatuController::class, 'update']);
 Route::patch('/sepatu/{id}', [SepatuController::class, 'update']);
 Route::delete('/sepatu/{id}', [SepatuController::class, 'destroy']);
 
-// Mobil
-Route::get('/mobil', [MobilController::class, 'index']);
-Route::post('/mobil', [MobilController::class, 'store']);
-Route::get('/mobil/{id}', [MobilController::class, 'show']);
-Route::put('/mobil/{id}', [MobilController::class, 'update']);
-Route::patch('/mobil/{id}', [MobilController::class, 'update']);
-Route::delete('/mobil/{id}', [MobilController::class, 'destroy']);
+Route::apiResource('mobil', MobilController::class);
