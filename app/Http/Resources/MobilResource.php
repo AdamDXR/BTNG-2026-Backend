@@ -10,15 +10,15 @@ class MobilResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'id'        => $this->id,
-            'nama'      => $this->nama,
-            'merek'     => $this->merek,
-            'tahun'     => $this->tahun,
-            'warna'     => $this->warna,
-            'harga'     => $this->harga,
-            'tersedia'  => (bool) $this->tersedia,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
+            'id' => $this->id,
+            'nama' => $this->nama,
+            'brand' => $this->brand,
+            'harga' => $this->harga,
+            'tahun' => $this->tahun,
+            'transmisi' => $this->transmisi,
+            'bahan_bakar' => $this->bahan_bakar,
+            'status' => $this->status,
+            'foto' => $this->foto,
         ];
     }
 }
