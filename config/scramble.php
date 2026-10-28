@@ -59,7 +59,7 @@ return [
     ],
 
     'ui' => [
-        'title' => null,
+        'title' => 'Showroom Mobil API',
     ],
 
     /*

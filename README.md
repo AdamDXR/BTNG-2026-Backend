@@ -6,8 +6,8 @@ RESTful API untuk manajemen data showroom mobil, dibuat sebagai Tugas Akhir Kela
 
 | Keterangan | URL |
 | --- | --- |
-| Base URL API | `https://NAMA-APP.cleverapps.io/api` |
-| Dokumentasi (Scramble) | `https://NAMA-APP.cleverapps.io/docs/api` |
+| Base URL API | `https://btng-2026-backend.cleverapps.io/api` |
+| Dokumentasi (Scramble) | `https://btng-2026-backend.cleverapps.io/docs/api` |
 
 ## Fitur
 

@@ -10,6 +10,16 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
+Route::get('/', function () {
+    return response()->json([
+        'message' => 'Showroom Mobil API siap digunakan',
+        'documentation' => url('/docs/api'),
+        'endpoints' => [
+            'mobil' => url('/api/mobil'),
+        ],
+    ]);
+});
+
 Route::get('/hello', function() {
     return 'Halo dari BTNG 2026';
 });
